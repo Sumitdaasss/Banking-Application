@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  banking-mysql:
+    image: mysql:8.0
+    container_name: banking_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Sumit@7989
+      MYSQL_DATABASE: banking_app
+    ports:
+      - "3307:3306"
+
+  banking-app:
+    image: banking-backend:latest
+    build: .
+    container_name: banking_backend
+    depends_on:
+      - banking-mysql
+    ports:
+      - "8080:8080"
