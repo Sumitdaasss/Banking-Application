@@ -19,6 +19,7 @@ Dockerized Spring Boot application
 
 Automated CI/CD pipeline using GitHub Actions
 
+
 🛠 Tech Stack
 Layer	Technology
 Backend	Spring Boot, Java
@@ -44,6 +45,7 @@ Banking-Application
 ├── pom.xml
 └── .github/workflows/ci.yml
 
+
 🔗 API Endpoints
 ➤ Create Account
 POST /api/accounts/create
@@ -57,6 +59,7 @@ POST /api/accounts/withdraw
 ➤ Check Balance
 GET /api/accounts/{accountId}/balance
 
+
 🐳 Docker Integration
 Build Docker Image
 docker build -t banking-app .
@@ -64,8 +67,10 @@ docker build -t banking-app .
 Run Docker Container
 docker run -p 8080:8080 banking-app
 
+
 Access Application
 http://localhost:8080
+
 
 🔄 GitHub Actions – CI/CD Pipeline
 Pipeline Includes:
@@ -81,6 +86,7 @@ Build Docker image
 GitHub Actions Workflow
 name: Spring Boot CI
 run: docker build -t banking-app .
+
 
 📦 How to Run Locally
 Step 1: Clone Repository
